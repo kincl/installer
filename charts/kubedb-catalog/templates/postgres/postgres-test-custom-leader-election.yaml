@@ -1,0 +1,45 @@
+{{ if .Values.catalog.postgres }}
+
+
+apiVersion: catalog.kubedb.com/v1alpha1
+kind: PostgresVersion
+metadata:
+  name: "12.4"
+  labels:
+    {{- include "kubedb-catalog.labels" . | nindent 4 }}
+spec:
+  version: "12.4"
+  db:
+    image: "hremon331046/postgres:12.4"
+  exporter:
+    image: "{{ .Values.image.registry }}/postgres_exporter:v0.4.7"
+  tools:
+    image: "{{ .Values.image.registry }}/postgres-tools:11.1"
+  podSecurityPolicies:
+    databasePolicyName: postgres-db
+
+
+{{ end }}
+---
+  {{ if .Values.catalog.postgres }}
+
+
+apiVersion: catalog.kubedb.com/v1alpha1
+kind: PostgresVersion
+metadata:
+  name: "9.6.20"
+  labels:
+    {{- include "kubedb-catalog.labels" . | nindent 4 }}
+spec:
+  version: "9.6.20"
+  db:
+    image: "hremon331046/postgres:9.6.20"
+  exporter:
+    image: "{{ .Values.image.registry }}/postgres_exporter:v0.4.7"
+  tools:
+    image: "{{ .Values.image.registry }}/postgres-tools:11.1"
+  podSecurityPolicies:
+    databasePolicyName: postgres-db
+
+
+  {{ end }}
