@@ -19,7 +19,7 @@ package v1alpha1_test
 import (
 	"testing"
 
-	"kubedb.dev/installer/apis/installer/v1alpha1"
+	"kmodules.xyz/installer/apis/installer/v1alpha1"
 
 	schemachecker "kmodules.xyz/schema-checker"
 )

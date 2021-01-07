@@ -1,4 +1,4 @@
-module kubedb.dev/installer
+module kmodules.xyz/installer
 
 go 1.12
 

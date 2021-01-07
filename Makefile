@@ -14,7 +14,7 @@
 
 SHELL=/bin/bash -o pipefail
 
-GO_PKG   := kubedb.dev
+GO_PKG   := kmodules.xyz
 REPO     := $(notdir $(shell pwd))
 BIN      := installer
 

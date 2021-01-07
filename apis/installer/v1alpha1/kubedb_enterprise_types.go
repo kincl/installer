@@ -35,7 +35,7 @@ const (
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // +kubebuilder:object:root=true
-// +kubebuilder:resource:path=kubedbenterprises,singular=kubedbenterprise,categories={kubedb,appscode}
+// +kubebuilder:resource:path=kubedbenterprises,singular=kubedbenterprise,categories={appscode}
 type KubedbEnterprise struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
