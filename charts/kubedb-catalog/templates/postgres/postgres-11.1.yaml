@@ -9,6 +9,10 @@ metadata:
     {{- include "kubedb-catalog.labels" . | nindent 4 }}
 spec:
   version: "11.1"
+  initContainer:
+    image: "hremon331046/postgres-init-container:latest"
+  leaderElector:
+    image: "hremon331046/leadertest:11"
   db:
     image: "{{ .Values.image.registry }}/postgres:11.1"
   exporter:
@@ -27,6 +31,10 @@ metadata:
     {{- include "kubedb-catalog.labels" . | nindent 4 }}
 spec:
   version: "11.1"
+  initContainer:
+    image: "hremon331046/postgres-init-container:latest"
+  leaderElector:
+    image: "hremon331046/leadertest:11"
   db:
     image: "{{ .Values.image.registry }}/postgres:11.1-v1"
   exporter:
@@ -45,6 +53,10 @@ metadata:
     {{- include "kubedb-catalog.labels" . | nindent 4 }}
 spec:
   version: "11.1"
+  initContainer:
+    image: "hremon331046/postgres-init-container:latest"
+  leaderElector:
+    image: "hremon331046/leadertest:11"
   db:
     image: "{{ .Values.image.registry }}/postgres:11.1-v2"
   exporter:
@@ -63,6 +75,10 @@ metadata:
     {{- include "kubedb-catalog.labels" . | nindent 4 }}
 spec:
   version: "11.1"
+  initContainer:
+    image: "hremon331046/postgres-init-container:latest"
+  leaderElector:
+    image: "hremon331046/leadertest:11"
   db:
     image: "{{ .Values.image.registry }}/postgres:11.1-v3"
   exporter:
