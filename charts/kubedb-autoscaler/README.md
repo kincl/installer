@@ -16,7 +16,7 @@ This chart deploys a KubeDB Autoscaler operator on a [Kubernetes](http://kuberne
 
 ## Prerequisites
 
-- Kubernetes 1.12+
+- Kubernetes 1.14+
 
 ## Installing the Chart
 

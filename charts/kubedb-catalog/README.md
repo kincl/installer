@@ -16,7 +16,7 @@ This chart deploys KubeDB catalog on a [Kubernetes](http://kubernetes.io) cluste
 
 ## Prerequisites
 
-- Kubernetes 1.11+
+- Kubernetes 1.14+
 
 ## Installing the Chart
 
